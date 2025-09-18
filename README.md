@@ -1,9 +1,11 @@
 # CSD121 Developer Journal
 
-This `README.md` file is the start of your developer journal. Use it to help you take lecture notes, plan, think, and remember important information that you encounter in CSD121.
-
-Read [this article](https://stackoverflow.blog/2024/12/24/you-should-keep-a-developer-s-journal/) to get a sense of what a developer journal is and how to use one.
-
-You may put your whole developer journal in this one file, or split it into multiple files/folders, but keep it all in this repository as a set of Markdown files. For information on how to format the text in a Markdown file, read [this documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-> **NOTE**: You may NOT use AI tools to generate your journal entries.  Doing so defeats the purpose of a developer journal.
+Always use clear and meaningful names, comments, and JavaDoc.
+Always test the program and use the debugger to fix errors.
+Always remember to declare the type of variables, otherwise it will get an error.
+Use break to end loops, you can use if statements in order to quit when the condittional has been executed.
+readln won't read integers, remember to parse them before hand.
+Use try/catch to handle errors without the programm crashing.
+In order to use theWholeFile to write a file, first convert the ArrayList into a List<String>.
+When wanting to write a file with StandardOpenOption.WRITE, also use StandardOpenOption.CREATE. If not, it won't work.
+Be sure to use variables in scope, if not, it will appear as it is not declared.
