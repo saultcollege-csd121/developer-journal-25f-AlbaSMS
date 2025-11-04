@@ -49,3 +49,13 @@ Enums prevent invalid data.
 Making members private prevents unwanted changes from other classes.
 
 Always give clear error messages to make sure the user knows what was wrong and how to fix it.
+
+Software testing is running software or software components in specific ways to verify that it works as expected. We should test early and often!
+
+Writing automated tests helps ensure program correctness.
+
+Each test should clearly state: Expected output, actual output, and make a visual distinction between 'passed' and 'failed' states.
+
+Write tests that verify that valid inputs produce valid outputs, but also, think about how your code could break or go wrong. Write tests that attempt to trigger those circumstances, and verify that your code handles them appropriately.
+
+Test each instance method just like testing class methods. Should test constructors too!
