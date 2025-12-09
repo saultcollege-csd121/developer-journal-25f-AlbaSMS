@@ -61,6 +61,7 @@ Write tests that verify that valid inputs produce valid outputs, but also, think
 Test each instance method just like testing class methods. Should *test constructors too*.
 
 
+
 **November 11th (Lecture 5)**
 
 Create software components that: are **cohesive**, are **loosely coupled with other components**, and have a **single responsibility**.
@@ -118,6 +119,7 @@ An abstract class is intended to be extended by subclasses and cannot be directl
 **Liskov substitution principle**: Any subtype should be usable in place of a supertype without changing the behaviour of the program. *Violations of this principle increase coupling.*
 
 
+
 **November 20th (Lecture 6)**
 
 **Classes** define both behaviour (methods) AND state (variables).
@@ -153,6 +155,7 @@ Adhering to the **Dependency inversion principle** loosens coupling.
 **The Observer Design Pattern:** A class representing the subject keeps a list of observers (via an interface); when the change occurs, the subject notifies all observers via the interface method.
 
 
+
 **November 25th**
 
 Every **JavaFX** app starts with a class that:
@@ -172,9 +175,11 @@ An **event handler** class may be used to provide behaviour in response to speci
 **EventHandler** is an interface that defines a single method: *handle.* The handle method is passed an Event object that represents information about the specific event that occurred. *Event is the most abstract of a hierarchy of Event classes.*
 
 
+
 **November 27th**
 
 **Controls:** UI element that can be manipulated by the user. Another class hierarchy. Extend the javafx.scene.controls.Control class.
+
 
 
 **December 2nd (Lecture 7)**
