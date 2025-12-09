@@ -60,6 +60,7 @@ Write tests that verify that valid inputs produce valid outputs, but also, think
 
 Test each instance method just like testing class methods. Should *test constructors too*.
 
+
 **November 11th (Lecture 5)**
 
 Create software components that: are **cohesive**, are **loosely coupled with other components**, and have a **single responsibility**.
@@ -115,3 +116,93 @@ An abstract class is intended to be extended by subclasses and cannot be directl
 **Software component** should be: ***Open for extension***, and ***closed for modification.***
 
 **Liskov substitution principle**: Any subtype should be usable in place of a supertype without changing the behaviour of the program. *Violations of this principle increase coupling.*
+
+
+**November 20th (Lecture 6)**
+
+**Classes** define both behaviour (methods) AND state (variables).
+
+**Superclasses** classes may define both behaviour AND state.
+
+**Subclasses** inherit the behaviour AND state of their superclasses.
+
+An **interface** can be used to define the common behaviour that all these different alert classes must share.
+
+A class that implements an interface **MUST** *implement all methods defined by the interface.*
+
+**Single Responsibility** Each interface should have a single, clear purpose
+
+**Interface Segregation** All classes that implement an interface should need all interface methods
+
+**Dependency Inversion** Depend on broader abstractions (interfaces) rather than specific types
+
+Adhering to the **Interface segregation principle** *increases coherence and loosens coupling.*
+
+If **NOT ALL** implementers need **ALL the methods** of the interface, *break the interface into smaller interfaces.*
+
+**High-level components** should not depend on low-level components. Instead, both should depend on abstractions.
+
+**Abstractions** should not depend on details. Instead, details should depend on abstractions.
+
+Adhering to the **Dependency inversion principle** loosens coupling.
+
+**Dependency Injection** refers to the practice of injecting rather than directly instantiating dependencies into software components.
+
+**The Strategy Design Pattern:** Create a class for each approach (strategy) that implements a common interface through which the component interacts.
+
+**The Observer Design Pattern:** A class representing the subject keeps a list of observers (via an interface); when the change occurs, the subject notifies all observers via the interface method.
+
+
+**November 25th**
+
+Every **JavaFX** app starts with a class that:
+
+1. Extends the JavaFX **Application** class
+
+2. Overrides the **start** method
+
+The main method calls Application.launch(). Once JavaFX platform is ready, your class’s start method is called with a Stage object as an argument.
+
+The **Stage:** Represents the root window of an app. Usually has window decorations. Operating system determines appearance of decorations. The Stage usually contains a Scene.
+
+The **Scene** Class: Consists of a scene graph. A tree of Node objects, each node has 1 parent (except the root node). Each node may have 0 or more children.
+
+An **event handler** class may be used to provide behaviour in response to specific events.
+
+**EventHandler** is an interface that defines a single method: *handle.* The handle method is passed an Event object that represents information about the specific event that occurred. *Event is the most abstract of a hierarchy of Event classes.*
+
+
+**November 27th**
+
+**Controls:** UI element that can be manipulated by the user. Another class hierarchy. Extend the javafx.scene.controls.Control class.
+
+
+**December 2nd (Lecture 7)**
+
+A **functional interface** is ANY interface with only one abstract (non-default) method.
+
+The optional **@FunctionalInterface** annotation can be used to enable compile-time warnings if an interface is not in fact functional.
+
+Functional interfaces can be implemented *without writing a full class.* As version 8, Java supports **lambda expressions** as a concise way to implement a functional interface.
+
+The arrow separates the parameter list from the function body. If the body of the function is just a single return statement, you only need the returned expression to the right of the arrow. If the body of the function is just a *single return statement*, you only need the returned expression to the right of the arrow. If the function has only a *single parameter*, you don't even need the parentheses around the parameter list.
+
+Anywhere a functional interface is expected, *a lambda expression may be used instead.*
+
+The **:: operator** before a method name turns this into a function REFERENCE.
+
+A **function reference** may be used anywhere that a *function interface is expected.*
+
+a function reference may be used anywhere that a function interface is expected.
+
+An **anonymous inner** class is a one-time, unnamed implementation of an interface that is usually immediately instantiated.
+
+The syntax where a code block comes immediately after a 'new' expression creates an anonymous class that *extends/implements the type that was just 'newed'.*
+
+Lambda expressions and function references are *automatically converted to their equivalent anonymous inner class.*
+
+Java's **Stream interface** provides a number operations that can be performed on Collection objects. Access a collection's stream using the **stream()** method
+
+Many operations in the stream interface return a Stream. These operations can thus be **chained**, *one after the next.*
+
+Many operations in the stream interface do **NOT** return a Stream. These operations can **NOT be chained** and are thus typically the *final method call in a stream operation*
